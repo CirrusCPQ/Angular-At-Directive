@@ -63,7 +63,7 @@ angular.module('At', ['ngCaret'])
         } else {
           source = element.val();
           startStr = source.slice(0, Math.max(query.headPos - 1, 0));
-          text = startStr + '@' + data + ' ' + (source.slice(query.endPos || 0));
+          text = startStr + data + ' ' + (source.slice(query.endPos || 0));
           element.val(text);
           ngModel.$setViewValue(text);
         }
