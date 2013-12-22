@@ -160,7 +160,7 @@ angular.module('At', ['ngCaret'])
               }
 
               if (angular.isObject(scope.query)) {
-                scope.users = scope.response;
+                //scope.users = scope.response;
                 scope.isAtListHidden = false;
                 scope.watchDelay = scope.watchDelayActive;
 
