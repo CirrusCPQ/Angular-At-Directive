@@ -216,8 +216,9 @@ angular.module('At', ['ngCaret'])
 
         scope.autoComplete = function (object) {
           element[0].focus();
-          AtUtils.insert(element, scope.content, object.username, scope.query, range, ngModel);
-          Caret.setPos(element, scope.query.headPos + object.username.length + 1);
+          AtUtils.insert(element, scope.content, object, scope.query, range, ngModel);
+          Caret.setPos(element, scope.query.headPos + object.length + 1);
+          scope.isAtListHidden = true;
         };
 
         span.bind('mouseenter', function () {
