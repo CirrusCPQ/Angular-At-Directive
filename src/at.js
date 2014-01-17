@@ -258,6 +258,7 @@ angular.module('At', ['ngCaret'])
                 range = AtUtils.markRange();
                 AtUtils.insert(element, scope.content, insertContent, scope.query, range, ngModel);
                 scope.isAtListHidden = true;
+                scope.stream.performSearch(scope.stream, scope.users);
               });
               Caret.setPos(element, scope.query.headPos + insertContent.length + 1);
 
