@@ -63,6 +63,8 @@ angular.module('At', ['ngCaret'])
         } else {
           source = element.val();
           startStr = source.slice(0, Math.max(query.headPos - 1, 0));
+          if (startStr.length > 1 && startStr.charAt(startStr.length-1) !== ' ')
+            data = ' '+data;
           text = startStr + data + ' ' + (source.slice(query.endPos || 0));
           element.val(text);
           ngModel.$setViewValue(text);
